@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Javascript Smooth Animation</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            -ms-overflow-style: none;
+            /* 인터넷 익스플로러 */
+            scrollbar-width: none;
+            /* 파이어폭스 */
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        #slide1 {
+            width: 100%;
+        }
+
+        .img {
+            background-image: url(./img/image.jpg);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            opacity: 1;
+            background-repeat: no-repeat;
+            background-position: center;
+            pointer-events: none;
+        }
+
+        .img img {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="sticky-container" id="sticky-container">
+
+        <div class="sticky">
+
+            <div class="slide-container">
+
+                <div class="slide" id="slide1">
+                    <div class="img">
+                        <img class="imgResize" src="img/image.jpg">
+                    </div>
+                </div>
+                <div id="scroll-down">
+                    <div class="scroll-down-text">아래로 스크롤하세요.</div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="slide-big-text">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                    <div class="slide-big-text">
+                        <p>3</p>
+                    </div>
+                </div>
+                <div class="slide slide-left" id="slide4">
+                    <div class="slide4-content">
+                        <div class="slide-big-text">
+                            <p>4</p>
+                        </div>
+                        <div class="slide-small-text">
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="moving-background">독립적으로 움직이는 배경</div>
+
+                <div class="slide slide-left" id="slide5">
+                    <div class="slide-big-text">
+                        <p>6</p>
+                    </div>
+                    <div class="go-surf-wrapper">
+                        <!-- <a href="https://springfall.cc/post/5" target="_blank">이 코드의 설명을 보려면 여기를 눌르세요.</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

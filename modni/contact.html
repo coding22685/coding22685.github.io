@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/content.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <div class="logo ">
+                <img class="curser" src="../img/logo.png" onclick="location.href='../index.html'">
+            </div>
+            <div id="rightbar">
+                <div id="youtube">
+                    <img class="curser" src="../img/youtube.png"
+                        onclick="location.href='https://www.youtube.com/channel/UC9loPlDQKW5um9Idq9gaDXA';" alt="">
+                </div>
+                <div id="twitch">
+                    <img class="curser" src="../img/twitch.png"
+                        onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
+                </div>
+                <div id="instagram">
+                    <img class="curser" src="../img/instagram.png"
+                        onclick="location.href='https://www.instagram.com/modnient/';" alt="">
+                </div>
+                <div>
+                    <img class="menubar curser" id="menubar" onclick="handleTitleClick()" src="../img/menu.png" alt="">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="content_wrap contacts_wrap" id="main" style="visibility: visible;">
+            <div class="content_tit">
+                <strong>MODNI</strong>
+                <ul class="cont_list_btn" id="cont_list_btn">
+                    <li class="">
+                        <a href="about.html">about</a>
+                    </li>
+                    <li class="">
+                        <a href="history.html">history</a>
+                    </li>
+                    <li class="">
+                        <a href="notice.html">notice</a>
+                    </li>
+                    <li class="active">
+                        <a href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact_cont">
+                <div class="loc-cont">
+                    <strong>
+                        MODNI CENTER
+                    </strong>
+                    <div class="loc-add">
+
+                        <p><i class="bi bi-map"></i>
+                            경기도 광명시 일직로 43 (일직동, MODNI CENTER) 우)14353
+                            <br>
+                            43, Iljik-ro, Gwangmyeong-si, Gyeonggi-do, Republic of Korea
+                        </p>
+                        <span>
+                            <i class="bi bi-telephone"></i>
+                            010-1234-5678
+                        </span>
+                    </div>
+                </div>
+                <div class="loc-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.603745052791!2d126.8843303760569!3d37.42283987207615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6141cacb5239%3A0xe613497491289716!2z6rK96riw64-EIOq0keuqheyLnCDsnbzsp4HroZwgNDM!5e0!3m2!1sko!2skr!4v1683013503780!5m2!1sko!2skr"
+                        style="border:0; width: 100%;" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="iframewrap" id="iframewrap" style="visibility: hidden;">
+            <iframe src="../menu.html">
+
+            </iframe>
+        </div>
+        <style>
+            a {
+                text-decoration: none;
+            }
+
+            ul.cont_list_btn {
+                margin-bottom: 0;
+            }
+        </style>
+    </div>
+    <script>
+        function handleTitleClick() {
+            var header = document.getElementById("iframewrap");
+            var main = document.getElementById("main");
+            if (main.style.visibility == 'visible') {
+                header.style.visibility = 'visible';
+                main.style.visibility = 'hidden';
+            } else {
+                header.style.visibility = 'hidden';
+                main.style.visibility = 'visible';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
