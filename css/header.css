@@ -138,8 +138,8 @@ body::-webkit-scrollbar {
 
 .logo img {
     display: inline-block;
-    width: 100px;
-    height: 36px;
+    width: 180px;
+    height: 90px;
     z-index: 12;
     position: absolute;
 }
