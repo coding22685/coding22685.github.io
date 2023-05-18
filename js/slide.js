@@ -11,8 +11,8 @@ const def = new Map([
     "slide1",
     {
       id: "slide1",
-      top: 0,
-      bottom: 1400,
+      top: -10,
+      bottom: 1300,
       topStyle: {
         opacity: 0,
         translateY: -60,
@@ -24,8 +24,8 @@ const def = new Map([
       animations: [
         {
           enabled: false,
-          top: 0,
-          bottom: 1400,
+          top: -10,
+          bottom: 1300,
           easing: midSlow,
           styles: [
             {
@@ -37,7 +37,7 @@ const def = new Map([
         },
         {
           enabled: false,
-          top: 0,
+          top: -10,
           bottom: 300,
           easing: ease,
           styles: [
@@ -51,7 +51,7 @@ const def = new Map([
         {
           enabled: false,
           top: 900,
-          bottom: 1400,
+          bottom: 1300,
           easing: easeIn,
           styles: [
             {
