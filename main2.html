@@ -51,7 +51,7 @@
             object-fit: cover;
         }
 
-        iframe {
+        #cha {
             width: 100%;
             min-height: 50%;
         }
@@ -61,6 +61,15 @@
             top: 10%;
             font-size: 30px;
             font-weight: 700;
+        }
+
+        #sub_cont {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            height: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -75,16 +84,12 @@
 
             </div>
             <div class="swiper-slide">
-                <div id="sub-title">멤버 소개</div><iframe src="cha.html">
+                <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
                 </iframe>
             </div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">
+                <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
+            </div>
         </div>
     </div>
 
