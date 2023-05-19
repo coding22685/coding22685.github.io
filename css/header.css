@@ -172,6 +172,15 @@ body::-webkit-scrollbar {
     left: 0;
 }
 
+.logo {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 1%;
+    z-index: 12;
+    align-items: center;
+}
+
 #wrapper {
     overflow: hidden;
     position: relative;
@@ -192,8 +201,8 @@ iframe {
 
 
     .logo img {
-        width: 70px;
-        height: 24px;
+        width: 100px;
+        height: 50px;
         background-size: 70px 24px;
     }
 
