@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/header.css" />
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <!-- Demo styles -->
   <style>
     body {
@@ -108,77 +109,6 @@
       width: 100%;
       height: 100%;
     }
-
-    .content2 .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .content2 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content2 .swiper-slide a {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-    }
-
-    .content2 .swiper-slide img {
-      display: block;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .content2 #cha {
-      width: 100%;
-      max-height: 50%;
-    }
-
-    .content2 #sub-title {
-      position: absolute;
-      color: black;
-      ;
-      top: 10%;
-      font-size: 30px;
-      font-weight: 700;
-    }
-
-    .content2 #sub_cont {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 50%;
-      height: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    #main_baner {
-      background-image: url(./img/horor_back.png);
-    }
-
-    @media screen and (max-width: 640px) {
-      .content2 .swiper-slide img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 50%;
-        height: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-
-      .content2 #sub_cont {
-        width: 100%;
-      }
-    }
   </style>
 
 </head>
@@ -187,136 +117,15 @@
 
   <!-- Swiper -->
   <div class="swiper mySwiper">
-    <div class="header">
-      <div class="logo">
-        <img class="curser" src="img/logo.png" onclick="location.href='index.html'">
-      </div>
-      <div id="rightbar">
-        <div id="youtube">
-          <img class="curser" src="img/youtube.png" alt="">
-        </div>
-        <div id="twitch">
-          <img class="curser" src="img/twitch.png" onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
-        </div>
-        <div id="instagram">
-          <img class="curser" src="img/instagram.png" onclick="location.href='https://www.instagram.com/modnient/';"
-            alt="">
-        </div>
-        <div>
-          <img class="menubar curser" id="menubar" onclick="handleTitleClick()" src="img/menu.png" alt="">
-
-        </div>
-      </div>
+    <div id="header">
 
     </div>
-
     <div class="swiper-wrapper" id="content-wrapper" style="visibility: visible;">
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/main1.jpg" />
-              <!-- onclick="window.open('https://www.youtube.com/channel/UC9loPlDQKW5um9Idq9gaDXA')"  -->
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
-
+      <div class="swiper-slide" id="main1">
       </div>
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" id="main_baner">
-
-              <img src="img/horor.png" />
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
+      <div class="swiper-slide" id="main2">
       </div>
-
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/main1.jpg" />
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/main1.jpg" />
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/main1.jpg" />
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="swiper content2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/main1.jpg" />
-
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">멤버 소개</div><iframe id="cha" src="cha.html">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="sub_cont.html"></iframe>
-            </div>
-          </div>
-        </div>
+      <div class="swiper-slide" id="main3">
       </div>
     </div>
 
@@ -367,6 +176,14 @@
       }
     }
 
+  </script>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#main1").load("./main_cont/main1.html");
+      $("#main2").load("./main_cont/main2.html");
+      $("#main3").load("./main_cont/main2.html");
+    });
   </script>
 </body>
 
