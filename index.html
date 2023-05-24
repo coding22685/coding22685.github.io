@@ -11,10 +11,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <!-- Demo styles -->
   <style>
-    body {
-      -ms-overflow-style: none;
-    }
-
     ::-webkit-scrollbar {
       display: none;
     }
@@ -36,25 +32,14 @@
     }
 
     body {
+      -ms-overflow-style: none;
       background: #eee;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
       margin: 0;
       padding: 0;
-    }
-
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
+      overflow: auto;
+      overscroll-behavior: contain;
     }
 
     .swiper {
