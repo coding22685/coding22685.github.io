@@ -54,6 +54,36 @@ for ($i=1; $i<10 ; $i++) { // 파싱할 게시판의 최대 페이지를 고려�
 }
 ?>
 </table>
+<style>
+      .table{
+        width: 70%;
+      }
+      .table a:link {
+            color: black;
+            text-decoration: none;
+        }
+    
+       .table a:visited {
+            color: black;
+            text-decoration: none;
+        }
+    
+       .table a:hover {
+            color: black;
+            text-decoration: none;
+            
+        }
+        #pages span{
+          cursor:pointer;
+        }
+        @media screen and (max-width: 1024px) {
+          .table{
+        width: 90%;
+      }
+        }
+
+</style>
+
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
   $(document).ready(function() {
