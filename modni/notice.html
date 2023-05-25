@@ -5,36 +5,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/content.css" />
+    <link rel="stylesheet" href="./css/notice.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
 
     <div id="wrapper">
-        <div class="header">
-            <div class="logo ">
-                <img class="curser" src="../img/logo.png" onclick="location.href='../index.html'">
-            </div>
-            <div id="rightbar">
-                <div id="youtube">
-                    <img class="curser" src="../img/youtube.png"
-                        onclick="location.href='https://www.youtube.com/channel/UC9loPlDQKW5um9Idq9gaDXA';" alt="">
-                </div>
-                <div id="twitch">
-                    <img class="curser" src="../img/twitch.png"
-                        onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
-                </div>
-                <div id="instagram">
-                    <img class="curser" src="../img/instagram.png"
-                        onclick="location.href='https://www.instagram.com/modnient/';" alt="">
-                </div>
-                <div>
-                    <img class="menubar curser" id="menubar" onclick="handleTitleClick()" src="../img/menu.png" alt="">
-
-                </div>
-            </div>
-
-        </div>
-        <div class="content_wrap" id="main" style="visibility: visible;">
+        <div id="header"></div>
+        <div class="content_wrap" id="content-wrapper" style="visibility: visible;">
             <div class="content_tit">
                 <strong>MODNI</strong>
                 <ul class="cont_list_btn" id="cont_list_btn">
@@ -52,11 +31,12 @@
                     </li>
                 </ul>
             </div>
+            <div id="table" class="table-wrap">
+            
+            </div>
         </div>
-        <div>
-            <iframe src="notice.php"></iframe>
-        </div>
-        <div class="iframewrap" id="iframewrap" style="visibility: hidden;">
+        
+        <div class="iframewrap wow fadeInUp " data-wow-duration="1s" id="iframewrap" style="visibility: hidden;">
             <iframe src="../menu.html">
 
             </iframe>
@@ -74,6 +54,12 @@
                 main.style.visibility = 'visible';
             }
         }
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("../header.html");
+            $("#table").load("notice.php");
+        });
     </script>
 </body>
 

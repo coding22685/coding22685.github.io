@@ -149,20 +149,6 @@
     });
   </script>
   <script>
-    function handleTitleClick() {
-      var header = document.getElementById("iframewrap");
-      var main = document.getElementById("content-wrapper");
-      if (main.style.visibility == 'visible') {
-        header.style.visibility = 'visible';
-        main.style.visibility = 'hidden';
-      } else {
-        header.style.visibility = 'hidden';
-        main.style.visibility = 'visible';
-      }
-    }
-
-  </script>
-  <script>
     $(function () {
       $("#header").load("header.html");
       $("#main1").load("./main_cont/main1.html");

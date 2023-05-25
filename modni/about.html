@@ -5,36 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/content.css" />
-    <link rel="stylesheet" href="./css/about.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="/modni/css/about.css" />
+    <link rel="stylesheet" href="/css/animate.css" />
 </head>
 
 <body>
+    <script src="/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <div id="wrapper">
-        <div class="header">
-            <div class="logo ">
-                <img class="curser" src="../img/logo.png" onclick="location.href='../index.html'">
-            </div>
-            <div id="rightbar">
-                <div id="youtube">
-                    <img class="curser" src="../img/youtube.png"
-                        onclick="location.href='https://www.youtube.com/channel/UC9loPlDQKW5um9Idq9gaDXA';" alt="">
-                </div>
-                <div id="twitch">
-                    <img class="curser" src="../img/twitch.png"
-                        onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
-                </div>
-                <div id="instagram">
-                    <img class="curser" src="../img/instagram.png"
-                        onclick="location.href='https://www.instagram.com/modnient/';" alt="">
-                </div>
-                <div>
-                    <img class="menubar curser" id="menubar" onclick="handleTitleClick()" src="../img/menu.png" alt="">
-
-                </div>
-            </div>
-
-        </div>
-        <div class="content_wrap about_wrap" id="main" style="visibility: visible;">
+        <div id="header"></div>
+        <div class="content_wrap about_wrap" id="content-wrapper" style="visibility: visible;">
             <div class="content_tit">
                 <strong>MODNI</strong>
                 <ul class="cont_list_btn" id="cont_list_btn">
@@ -60,8 +44,8 @@
 
                         </div>
                     </div>
-                    <div class="about_bg_cont">
-                        <div class="about_txt_wrap on">
+                    <div class="about_bg_cont" >
+                        <div class="about_txt_wrap wow fadeInUp " data-wow-duration="1s">
                             <P>
                                 <strong>
                                     POINTER IN ENTERTAINMENT
@@ -77,24 +61,15 @@
             </div>
         </div>
         <div class="iframewrap" id="iframewrap" style="visibility: hidden;">
-            <iframe src="../menu.html">
+            <iframe src="/menu.html">
 
             </iframe>
         </div>
     </div>
     <script>
-        function handleTitleClick() {
-            var header = document.getElementById("iframewrap");
-            var main = document.getElementById("main");
-            if (main.style.visibility == 'visible') {
-                header.style.visibility = 'visible';
-                main.style.visibility = 'hidden';
-            } else {
-                header.style.visibility = 'hidden';
-                main.style.visibility = 'visible';
-            }
-        }
-
+        $(function () {
+            $("#header").load("/header.html");
+        });
     </script>
 </body>
 
