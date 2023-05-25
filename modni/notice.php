@@ -35,10 +35,9 @@ function naver_cafe_article_parser($page_no){
  
  
     echo "<tr>";
-    echo "<td>".$article_title."</td>";
-    echo "<td>".$article_publisher."</td>";
-    echo "<td>".$article_date."</td>";
-    echo "<td> <a href=https://cafe.naver.com".$article_link.">링크</a></td>"; //카페링크 aaaaa처리하였음. 본인이 변경하세요.
+    echo "<td><a href=https://cafe.naver.com".$article_link.">".$article_title."</a></td>";
+    echo "<td><a href=https://cafe.naver.com".$article_link.">".$article_publisher."</a></td>";
+    echo "<td><a href=https://cafe.naver.com".$article_link.">".$article_date."</a></td>";
     echo "</tr>";
   }
 }
@@ -48,7 +47,6 @@ function naver_cafe_article_parser($page_no){
             <th>글제목</th>
             <th>작성자</th>
             <th>등록일시</th>
-            <th>링크</th>
         </thead>
 <?php
 for ($i=1; $i<10 ; $i++) { // 파싱할 게시판의 최대 페이지를 고려하세요.

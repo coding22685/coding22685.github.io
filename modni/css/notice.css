@@ -40,3 +40,18 @@ table{
         font-size: 14px;
         color: black;
 }
+    a:link {
+            color: black;
+            text-decoration: none;
+        }
+    
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: black;
+            text-decoration: none;
+            
+        }
