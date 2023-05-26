@@ -149,6 +149,17 @@
     });
   </script>
   <script>
+    $(window).scroll(function () {
+        var scrT = $(window).scrollTop();
+        console.log(scrT); //스크롤 값 확인용
+        if (scrT == $(document).height() - $(window).height()) {
+          alert("바보");
+        } else {
+          alert("바보");
+        }
+      });
+  </script>
+  <script>
     $(function () {
       $("#header").load("header.html");
       $("#main1").load("./main_cont/main1.html");

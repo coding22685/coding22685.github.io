@@ -8,10 +8,12 @@
         var main = document.getElementById("content-wrapper");
         if (main.style.visibility == 'visible') {
             $("#menubar").attr("src", "/img/menu_white.png");
+            $("#youtube").attr("src", "/img/youtube_white.png");
             header.style.visibility = 'visible';
             main.style.visibility = 'hidden';
         } else {
             $("#menubar").attr("src", "/img/menu.png");
+            $("#youtube").attr("src", "/img/youtube.png");
             header.style.visibility = 'hidden';
             main.style.visibility = 'visible';
         }
@@ -24,17 +26,17 @@
     </div>
     <div id="rightbar">
         <div id="youtube">
-            <img class="curser" src="/img/youtube_white.png" onclick="location.href='https://www.youtube.com/@entertainmentModni4193';" alt="">
+            <img class="curser" src="/img/youtube.png" onclick="location.href='https://www.youtube.com/@entertainmentModni4193';" alt="">
         </div>
         <div id="twitch">
-            <img class="curser" src="/img/twitch_white.png" onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
+            <img class="curser" src="/img/Twitch.png" onclick="location.href='https://www.twitch.tv/tmdry159';" alt="">
         </div>
         <div id="instagram">
-            <img class="curser" src="/img/instagram_white.png" onclick="location.href='https://www.instagram.com/modnient/';"
+            <img class="curser" src="/img/instagram.png" onclick="location.href='https://www.instagram.com/modnient/';"
                 alt="">
         </div>
         <div>
-            <img class="menubar curser" id="menubar" onclick="handleTitleClick()" src="/img/menu.png" alt="">
+            <img class="menubar curser" id="menubar" onclick="handleTitleClick(); dark(); white();" src="/img/menu.png" alt="">
 
         </div>
     </div>

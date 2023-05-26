@@ -156,10 +156,12 @@ body::-webkit-scrollbar {
 #rightbar>div {
     float: left;
     margin-right: 50px;
+    width: 30px;
 }
 
 #rightbar img {
-    width: 30px;
+    width: 100%;
+
 }
 
 #menubar {

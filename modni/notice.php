@@ -42,7 +42,12 @@ function naver_cafe_article_parser($page_no){
   }
 }
 ?>
-    <table class="table">
+<link rel="stylesheet" href="../css/animate.css" />
+<script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <table class="table  wow fadeInUp " data-wow-duration="1s">
         <thead>
             <th>글제목</th>
             <th>작성자</th>
