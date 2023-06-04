@@ -3,10 +3,30 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>모드니홈페이지</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/style6.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Demo styles -->
     <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /*특정 부분 스크롤바 없애기*/
+
+        .box {
+            -ms-overflow-style: none;
+        }
+
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+
         html,
         body {
             position: relative;
@@ -14,86 +34,129 @@
         }
 
         body {
+            -ms-overflow-style: none;
             background: #eee;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-size: 14px;
-            color: #000;
             margin: 0;
             padding: 0;
+            overflow: auto;
+            overscroll-behavior: contain;
         }
 
-        swiper-container {
+        .swiper {
             width: 100%;
             height: 100%;
         }
 
-        swiper-slide {
-            text-align: center;
+        .myswiper-slide {
             font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
-        swiper-slide img {
-            display: block;
+        .parallax-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 130%;
+            height: 100%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .myswiper-slide .title {
+            font-size: 41px;
+            font-weight: 300;
+        }
+
+        .myswiper-slide .subtitle {
+            font-size: 21px;
+        }
+
+        .myswiper-slide .text {
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.3;
+        }
+
+
+
+        .iframewrap {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100vh;
+            z-index: 11;
+        }
+
+        .iframewrap iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        body {
-            background: #eee;
-        }
-
-        swiper-container {
-            width: 100%;
-            height: 300px;
-            margin: 20px 0;
         }
     </style>
+
 </head>
 
 <body>
 
-    <swiper-container class="mySwiper" space-between="30" pagination="true" pagination-clickable="true">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
-    </swiper-container>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div id="header">
 
-    <swiper-container class="mySwiper2" space-between="30" pagination="true" pagination-clickable="true">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
-    </swiper-container>
+        </div>
+        <div class="swiper-wrapper" id="content-wrapper" style="visibility: visible;">
+            <div class="swiper-slide myswiper-slide" id="main1">
+            </div>
+            <div class="swiper-slide myswiper-slide" id="main2">
+            </div>
+            <!-- <div class="swiper-slide myswiper-slide" id="main3">
+      </div> -->
+        </div>
+        <div class="overlay overlay-door iframewrap" id="iframewrap" style="visibility: hidden;"><iframe src="menu.html">
+        
+        </iframe></div>
+    </div>
 
-    <swiper-container class="mySwiper3" space-between="30" pagination="true" pagination-clickable="true">
-        <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
-        <swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide>
-        <swiper-slide>Slide 9</swiper-slide>
-    </swiper-container>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".content2", {
+            direction: "vertical",
+            speed: 1000,
+            slidesPerView: 1,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#main1").load("./main_cont/main1.html");
+            $("#main2").load("./main_cont/main2.html");
+            $("#main3").load("./main_cont/main3.html");
+        });
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/demo1.js"></script>
 </body>
 
 </html>

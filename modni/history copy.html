@@ -3,11 +3,14 @@
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/content.css" />
     <link rel="stylesheet" href="./css/history.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/hph2pnz.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="/css/component.css" />
     <script src="/js/modernizr.custom.js"></script>
 </head>
@@ -18,15 +21,15 @@
         new WOW().init();
     </script>
     <div id="header"></div>
-    <header id="ha-header" class="ha-header ha-header-large">
-        <div class="ha-header-perspective">
-            <div class="ha-header-front">
-                <h1><span>HISTORY</span></h1>
-    
-            </div>
-        </div>
-    </header>
         <div class="content_wrap history_wrap " id="content-wrapper" style="visibility: visible;">
+            <header id="ha-header" class="ha-header ha-header-large">
+                <div class="ha-header-perspective">
+                    <div class="ha-header-front">
+                        <h1><span>HISTORY</span></h1>
+                        
+                    </div>
+                </div>
+            </header>
             <div class="content_tit">
                 <strong>MODNI</strong>
                 <ul class="cont_list_btn" id="cont_list_btn">
@@ -44,6 +47,7 @@
                     </li>
                 </ul>
             </div>
+            
             <div class="his_cont">
                 <section class="ha-waypoint" data-animate-down="ha-header-hide" data-animate-up="ha-header-small">
                 <div class="history_list wow fadeInUp " data-wow-duration="1s">
@@ -55,6 +59,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="history_list  wow fadeInUp " data-wow-duration="1s" >
                     <strong>2022</strong>
                     <ul>
@@ -72,6 +77,7 @@
                         </li>
                     </ul>
                 </div>
+                
                 <div class="history_list wow fadeInUp " data-wow-duration="1s">
                     <strong>2021</strong>
                     <ul>
@@ -82,10 +88,11 @@
                     </ul>
                 </div>
                 </section>
-
+                
             </div>
         </div>
-        <!-- <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-hide"></section> -->
+        <section class="ha-waypoint" data-animate-down="ha-header-small" data-animate-up="ha-header-hide">
+        </section>
         <div class="iframewrap" id="iframewrap" style="visibility: hidden;">
             <iframe src="../menu.html">
 
@@ -102,7 +109,6 @@
     <script src="/js/waypoints.min.js"></script>
     <script>
         var $head = $('#ha-header');
-        var $menu = $('#header');
         $('.ha-waypoint').each(function (i) {
             var $el = $(this),
                 animClassDown = $el.data('animateDown'),
@@ -111,24 +117,9 @@
             $el.waypoint(function (direction) {
                 if (direction === 'down' && animClassDown) {
                     $head.attr('class', 'ha-header ' + animClassDown);
-                    if ($head.hasClass("ha-header-hide") === true) {
-                        $menu.removeClass('hidden');
-                        $menu.addClass('show');
-                        
-                    }
-                    if ($head.hasClass("ha-header-hide") === false) {
-                        $menu.removeClass('show');
-                        $menu.addClass('hidden');
-                    }
-
                 }
                 else if (direction === 'up' && animClassUp) {
                     $head.attr('class', 'ha-header ' + animClassUp);
-                    if ($head.hasClass("ha-header-hide") === true) {
-                        $menu.removeClass('hidden');
-                        $menu.addClass('show');
-
-                    }
                 }
             }, { offset: '100%' });
         });
