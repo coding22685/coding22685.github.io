@@ -14,15 +14,6 @@ $h-initial-opposition: 5px;
 $h-hide-distance: $h-width + $h-padding;
 
 
-body {
-  min-height: 100vh;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
 @mixin line-props {
   width: 100%;
   height: $h-line-height;

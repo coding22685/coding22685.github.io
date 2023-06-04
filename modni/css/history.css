@@ -68,7 +68,9 @@
         padding: 0 15px;
         box-sizing: border-box;
     }
-
+.content_tit {
+    margin-bottom: 60px;
+}
     .his_cont .history_list {
         position: relative;
         padding-left: 0;

@@ -62,7 +62,13 @@
 }
 
 .loc-map {
+    width: 100%;
+    height: 500px;
     margin: 40px 0 120px;
+}
+.loc-map iframe{
+    width: 100%;
+    height: 500px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -75,7 +81,9 @@
     .content_tit strong {
         font-size: 28px;
     }
-
+.content_tit{
+    margin-bottom: 60px;
+}
     .contacts_wrap {
         padding: 100px 0 72px;
     }
@@ -109,7 +117,9 @@
         display: block;
         padding: 0 15px;
     }
-
+    .loc-map{
+        height: 100%;
+    }
     .content_tit {
         margin-bottom: 60px;
     }
@@ -133,12 +143,12 @@
     }
 
     .loc-add p {
-        margin-left: 15px;
+        margin-left: 0px;
         font-size: 14px;
     }
 
     .loc-add span {
-        margin-left: 15px;
+        margin-left: 0px;
         font-size: 14px;
     }
 }
