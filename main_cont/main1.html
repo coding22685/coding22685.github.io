@@ -18,7 +18,8 @@
             </iframe>
         </div>
         <div class="swiper-slide">
-            <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="./main_cont/sub_cont/sub_cont1.html"></iframe>
+            <div id="sub-title">내용 소개</div>
+            <div class="sub_cont" id="sub_cont1">
         </div>
     </div>
 </div>
@@ -37,3 +38,9 @@
     });
 </script>
 <link rel="stylesheet" href="../css/main_cont.css" />
+<script>
+    $(function () {
+
+        $("#sub_cont1").load("/main_cont/sub_cont/sub_cont1.html");
+    });
+</script>

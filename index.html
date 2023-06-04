@@ -47,7 +47,7 @@
       height: 100%;
     }
 
-    .swiper-slide {
+    .myswiper-slide {
       font-size: 18px;
       color: #fff;
       -webkit-box-sizing: border-box;
@@ -65,16 +65,16 @@
       background-position: center;
     }
 
-    .swiper-slide .title {
+    .myswiper-slide .title {
       font-size: 41px;
       font-weight: 300;
     }
 
-    .swiper-slide .subtitle {
+    .myswiper-slide .subtitle {
       font-size: 21px;
     }
 
-    .swiper-slide .text {
+    .myswiper-slide .text {
       font-size: 14px;
       max-width: 400px;
       line-height: 1.3;
@@ -106,12 +106,12 @@
 
     </div>
     <div class="swiper-wrapper" id="content-wrapper" style="visibility: visible;">
-      <div class="swiper-slide" id="main1">
+      <div class="swiper-slide myswiper-slide" id="main1">
       </div>
-      <div class="swiper-slide" id="main2">
+      <div class="swiper-slide myswiper-slide" id="main2">
       </div>
-      <div class="swiper-slide" id="main3">
-      </div>
+      <!-- <div class="swiper-slide myswiper-slide" id="main3">
+      </div> -->
     </div>
 
     <div class="iframewrap" id="iframewrap" style="visibility: hidden;">
@@ -149,22 +149,11 @@
     });
   </script>
   <script>
-    $(window).scroll(function () {
-        var scrT = $(window).scrollTop();
-        console.log(scrT); //스크롤 값 확인용
-        if (scrT == $(document).height() - $(window).height()) {
-          alert("바보");
-        } else {
-          alert("바보");
-        }
-      });
-  </script>
-  <script>
     $(function () {
       $("#header").load("header.html");
       $("#main1").load("./main_cont/main1.html");
       $("#main2").load("./main_cont/main2.html");
-      $("#main3").load("./main_cont/main2.html");
+      $("#main3").load("./main_cont/main3.html");
     });
   </script>
 </body>

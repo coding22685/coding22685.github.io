@@ -11,7 +11,10 @@
             </iframe>
         </div>
         <div class="swiper-slide">
-            <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="./main_cont/sub_cont/sub_cont3.html"></iframe>
+            <div id="sub-title">내용 소개</div>
+            <div class="sub_cont" id="sub_cont3">
+            </div>
+       
         </div>
     </div>
 </div>
@@ -26,5 +29,11 @@
             el: ".swiper-pagination",
             clickable: true,
         },
+    });
+</script>
+<script>
+    $(function () {
+        
+        $("#sub_cont3").load("/main_cont/sub_cont/sub_cont3.html");
     });
 </script>

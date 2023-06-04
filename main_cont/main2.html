@@ -31,20 +31,29 @@
             </iframe>
         </div>
         <div class="swiper-slide">
-            <div id="sub-title">내용 소개</div><iframe id="sub_cont" src="./main_cont/sub_cont/sub_cont2.html"></iframe>
+            <div id="sub-title">내용 소개</div>
+            <div class="sub_cont" id="sub_cont2">
+            </div>
+            </iframe>
         </div>
-    </div>
-</div>
-<script src="../js/swiper.js"></script>
-<script>
-    var swiper = new Swiper(".content2", {
-        direction: "vertical",
-        speed: 1000,
-        slidesPerView: 1,
-        mousewheel: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
-</script>
+        </div>
+        </div>
+        <script src="../js/swiper.js"></script>
+        <script>
+            var swiper = new Swiper(".content2", {
+                direction: "vertical",
+                speed: 1000,
+                slidesPerView: 1,
+                mousewheel: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+        <script>
+            $(function () {
+
+                $("#sub_cont2").load("/main_cont/sub_cont/sub_cont2.html");
+            });
+        </script>

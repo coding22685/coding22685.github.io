@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
     left: 0;
 }
 #iframewrap{
-    z-index: 10;
+    z-index: 11;
 }
 .logo {
     display: flex;
@@ -192,10 +192,6 @@ body::-webkit-scrollbar {
     min-height: 100vh;
 }
 
-iframe {
-    width: 100vw;
-    height: 100vh;
-}
 
 @media screen and (max-width: 1024px) {
 
@@ -213,6 +209,9 @@ iframe {
     #rightbar>div {
         float: left;
         margin-right: 20px;
+    }
+    #rightbar>div:not(:last-child) {
+        visibility:hidden              
     }
 }
 

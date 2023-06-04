@@ -15,7 +15,7 @@ function naver_cafe_article_parser($page_no){
   //카페 링크 aaaaa처리
   //search.clubid, search.menuid 0 처리
   //하였기 때문에 본인 카페 링크및 게시판 확인하셔서 변경하셔야합니다.
-  $url = "https://cafe.naver.com/ArticleList.nhn?search.clubid=29874834&search.menuid=23&search.boardtype=L&userDisplay=10&search.cafeId=29874834&search.page=".$page_no;
+  $url = "https://cafe.naver.com/ArticleList.nhn?search.clubid=29874834&search.menuid=23&userDisplay=10&search.cafeId=29874834&search.page=".$page_no;
  //https://cafe.naver.com/ArticleRead.nhn?clubid=30524522&page=1&menuid=7&boardtype=L&articleid=3&referrerAllArticles=false
  //https://cafe.naver.com/ArticleList.nhn?search.clubid=29874834&search.menuid=1&userDisplay=10&search.boardtype=L&search.specialmenutype=&search.totalCount=101&search.cafeId=29874834&search.page=1
   $html = file_get_html($url);
@@ -54,7 +54,7 @@ function naver_cafe_article_parser($page_no){
             <th>등록일시</th>
         </thead>
 <?php
-for ($i=1; $i<10 ; $i++) { // 파싱할 게시판의 최대 페이지를 고려하세요.
+for ($i=1; $i<=3 ; $i++) { // 파싱할 게시판의 최대 페이지를 고려하세요.
   naver_cafe_article_parser($i);
 }
 ?>
