@@ -223,9 +223,9 @@ body::-webkit-scrollbar {
     #rightbar{
         top:20px;
     }
-    #rightbar>div {
+        #rightbar>div:last-child {
         float: left;
-        margin-right: 20px;
+        margin-right: 0px;
     }
     #rightbar>div:not(:last-child) {
         visibility:hidden              
