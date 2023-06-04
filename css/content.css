@@ -97,8 +97,12 @@ ul.cont_list_btn::-webkit-scrollbar {
     .content_tit {
         margin-bottom: 0px;
     }
+        #rightbar>div:last-child {
+            float: left;
+            margin-right: 15px;
 }
 
+}
 @media screen and (max-width: 640px) {
 
     .content_tit {
