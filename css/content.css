@@ -95,7 +95,7 @@ ul.cont_list_btn::-webkit-scrollbar {
     }
 
     .content_tit {
-        margin-bottom: 0px;
+        margin-bottom: 60px;
     }
         #rightbar>div:last-child {
             float: left;
@@ -108,5 +108,8 @@ ul.cont_list_btn::-webkit-scrollbar {
     .content_tit {
         margin-bottom: 60px;
     }
+        .content_wrap .content_tit li {
+            margin-left: 16px;
+        }
 
 }
