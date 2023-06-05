@@ -222,6 +222,7 @@ body::-webkit-scrollbar {
     }
     #rightbar{
         top:20px;
+        z-index: 10;
     }
         #rightbar>div:last-child {
         float: left;

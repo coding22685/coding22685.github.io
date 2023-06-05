@@ -12,15 +12,12 @@
 	-moz-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 	letter-spacing: 1px;
-	font-weight: 700;
-	font-size: 2em;
 	line-height: 2;
 	width: 10em;
 	text-align: center;
 	height: 2em;
 	color: #e74c3c;
 	background: #fff;
-	font-style: normal;
 	text-transform: uppercase;
 	opacity: 0.8;
 }
@@ -29,7 +26,6 @@
 	display: block;
 	content: '\2193';
 	color: #fff;
-	font-size: 3em;
 	line-height: 1;
 }
 
@@ -42,7 +38,6 @@
 	width: 100%;
 	padding: 0;
 	z-index: 10;
-	font-family: 'Lato', Arial, sans-serif;
 	-webkit-transform: translateY(0%);
 	-moz-transform: translateY(0%);
 	transform: translateY(0%);
@@ -121,8 +116,6 @@
 }
 
 .ha-header h1 {
-	font-weight: 300;
-	font-size: 3.2em;
 	margin: 0;
 	color: #2d383f;
 	cursor: default;
@@ -170,10 +163,8 @@
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 700;
     padding: 0.2em 0.4em;
     margin: 0 0.4em 0;
-    font-size: 0.8em;
     cursor: pointer;
     color: #e74c3c;
     outline: none;
@@ -200,9 +191,6 @@
 
 /* Individual states */
 
-.ha-header-large {
-	height: 420px;
-}
 
 .ha-header-hide {
 	height: 220px;
@@ -300,9 +288,6 @@
 	transform: rotateX(-90deg);
 }
 
-.ha-header-color {
-	height: 420px;
-}
 
 .ha-header-color .ha-header-front,
 .ha-header-color .ha-header-bottom {
