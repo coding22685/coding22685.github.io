@@ -88,6 +88,9 @@
 ul.cont_list_btn::-webkit-scrollbar {
     display: none;
 }
+.content_tit strong, .content_tit a{
+    font-family: europa, sans-serif;
+}
 
 @media screen and (max-width: 1024px) {
     .content_wrap {

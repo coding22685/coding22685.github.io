@@ -2,14 +2,11 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/content.css" />
     <link rel="stylesheet" href="./css/history.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="../css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="/css/component.css" />
     <link rel="stylesheet" href="../css/base.css" />
 </head>
 
@@ -19,14 +16,14 @@
         new WOW().init();
     </script>
     <div id="header"></div>
-    <header id="ha-header" class="ha-header ha-header-large">
+    <!-- <header id="ha-header" class="ha-header ha-header-large">
         <div class="ha-header-perspective">
             <div class="ha-header-front">
                 <h1><span>HISTORY</span></h1>
     
             </div>
         </div>
-    </header>
+    </header> -->
         <div class="content_wrap history_wrap " id="content-wrapper" style="visibility: visible;">
             <div class="content_tit">
                 <strong>MODNI</strong>
@@ -93,14 +90,27 @@
             </iframe>
         </div>
     </div>
-    
+    <script>
+        function handleTitleClick() {
+            var header = document.getElementById("iframewrap");
+            var main = document.getElementById("main");
+            if (main.style.visibility == 'visible') {
+                header.style.visibility = 'visible';
+                main.style.visibility = 'hidden';
+            } else {
+                header.style.visibility = 'hidden';
+                main.style.visibility = 'visible';
+            }
+        }
+    </script>
     <script>
         $(function () {
             $("#header").load("../header.html");
         });
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/js/waypoints.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
     <script>
         var $head = $('#ha-header');
         var $menu = $('#header');
@@ -133,7 +143,7 @@
                 }
             }, { offset: '100%' });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
