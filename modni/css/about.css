@@ -62,7 +62,13 @@
     font-weight: 700;
     font-size: 24px;
 }
-
+#email_box {
+    width: 50%;
+    margin: 0 auto;
+}
+.about_txt_wrap p{
+    margin-bottom: 10px;
+}
 @media screen and (max-width: 1636px) {
     .video img {
         width: 315px;
@@ -85,7 +91,9 @@
     .about_wrap .about_cont {
         position: relative;
     }
-
+#email_box {
+    width: 100%;
+}
     .about_wrap .about_cont .about_bg_wrap {
         position: relative;
         display: block;
@@ -109,6 +117,9 @@
         width: 369px;
         height: 394px;
     }
+        .about_txt_wrap p{
+            margin-bottom: 0px;
+        }
 
 
 }
